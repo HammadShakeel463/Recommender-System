@@ -1,0 +1,35 @@
+The major flaw of this algorithm, and in general of Euclidean distance based comparisons, is that if the whole distribution of rankings from a person tends to be higher than those from other person (a person is inclined to give higher scores than the other), this metric would classify them as dissimilar without regard the correlation between two people
+
+Jaccard similarity has a major drawback when the two sets being compared have different sizes. Consider two sets, A and B, where both sets contain 100 elements. Now assume that 50 of those elements are common across the two sets. The Jaccard Similarity is js(A, B) = 50 / (100 + 100 – 50 ) = 0.33. Now if we increase set A by 10 elements and decrease set B by the same amount, all while maintaining 50 elements in common, the Jaccard Similarity remains the same
+
+Sampling is the main technique used in DM for selecting a subset of relevant data from a large data set. It is used both in the preprocessing and final data interpretation steps. The key issue to sampling is finding a subset of the original data set that is representative – i.e. it has approximately the same property of interest – of the entire set. The simplest sampling technique is random sampling, where there is an equal probability of selecting any item. However, more sophisticated approaches are possible. For instance, in stratified sampling the data is split into several partitions based on a particular feature, followed by random sampling on each partition independently. The most common approach to sampling consists of using sampling without replacement: When an item is selected, it is removed from the population. However, it is also possible to perform sampling with replacement, where items are not removed from the population once they have been selected, allowing for the same sample to be selected more than once.
+
+The notions of density and distance between points, which are critical for clustering and outlier detection, become less meaningful in highly dimensional spaces. This is known as the Curse of Dimensionality Sparsity and the curse of dimensionality are recurring problems in RS.
+
+
+advantages of content based filtering 
+USER INDEPENDENCE : exploit solely ratings provided by the active user to build her own profile
+TRANSPARENCY
+NEW ITEM : Content-based recommenders are capable of recommending items not yet rated by any user.
+
+limitation :
+LIMITED CONTENT ANALYSIS : Content-based techniques have a natural limit in the number and type of features that are associated with the objects they recommend
+OVER-SPECIALIZATION : Content-based recommenders have no inherent method
+for finding something unexpected
+NEW USER : when few ratings are available, as for a new user, the system will not be able to provide reliable recommendations.
+
+
+sarendipity ;
+The system suggests items whose scores are high when matched against the user profile, hence the user is going to be recommended items similar to those already rated. This drawback is also called serendipity problem to highlight the tendency of the content-based systems to produce recommendations with a limited degree of novelty. To give an example, when a user has only rated movies directed by Stanley Kubrick, she will be recommended just that kind of movies.
+
+
+A key limitation of Pearson's r is that it cannot distinguish between independent and dependent variables. Therefore, also if a relationship between two variables is found, Pearson's r does not indicate which variable was 'the cause' and which was 'the effect'.
+
+When the two users have only a small number of ratings in common, the similarity function sim(u, v) should include a discount factor to de-emphasize the importance of that particular user pair This method is referred to as Significance Weighting
+
+
+
+
+
+
+
